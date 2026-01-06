@@ -62,7 +62,7 @@ title: News
   // Specific News Data for the Feed
   const allNews = [
     {% if site.data.news %}
-      {% assign sorted_news = site.data.news | sort: "date" | reverse %}
+      {% assign sorted_news = site.data.news | sort: "date" %}
       {% for news in sorted_news %}
         {
           title: {{ news.title | jsonify }},
@@ -235,7 +235,7 @@ title: News
         }
       });
     } else {
-      listEl.innerText = "No data available.";
+      listEl.innerText = "No Messiers culminating in this time frame.";
     }
   }
 
@@ -289,8 +289,8 @@ title: News
         percent = Math.round(moonIllum.fraction * 100);
       }
       
-      // Gradient background
-      cell.style.background = `linear-gradient(90deg, rgba(200, 200, 220, 0.5) ${percent}%, white ${percent}%)`;
+      // Gradient background: White represents illumination, Shaded represents dark
+      cell.style.background = `linear-gradient(90deg, white ${percent}%, rgba(200, 200, 220, 0.5) ${percent}%)`;
 
       // Tooltip with Sun/Moon times
       if (window.SunCalc && moonIllum) {
