@@ -17,7 +17,7 @@ all: true
 ---
 Author: Sarthak Arora
 
-Many times we talk about star clusters. The types, i.e. open and globular, their similarities and differences, are they really related to dark matter etc etc. But we rarely discuss the process by which globular clusters might lose mass, if they do at all. 
+Many times we talk about star c lusters. The types, i.e. open and globular, their similarities and differences, are they really related to dark matter etc etc. But we rarely discuss the process by which globular clusters might lose mass, if they do at all. 
 
 Well, they do lose mass (sort of obvious) and the process reveals new details related to many things. The process can be either small perturbations, from the orbits that grow over time to push each other out (known as Evaporation via Two-Body Relaxation), or a sudden throw due to some extreme tidal force due to external (or maybe internal) factors. The external factor for 'the tidal throw' can be the encounter of a massive object that rips apart some stars from the cluster. These can be identified by spotting something that is known as 'tidal tails', the tail of stars ripped out of the cluster due to external gravitational fields (known as Tidal Stripping). 
 

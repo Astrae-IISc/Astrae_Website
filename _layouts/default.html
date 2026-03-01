@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -60,7 +60,7 @@ ga('send', 'pageview');
 
 <!-- Begin Menu Navigation
 ================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top mediumnavigation nav-down">
 
     <div class="container pr-0">
 
@@ -128,10 +128,6 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/aboutus">About Us</a>
                 {% endif %}
                 </li>
-
-                {% if page.title == 'Blog' or page.categories contains 'blog' %}
-                {% include search-lunr.html %}
-                {% endif %}
 
             </ul>
 

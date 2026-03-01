@@ -27,3 +27,5 @@ The observation session concluded on a positive note, with people going back hom
 
 
 Clear Skies!
+
+Image credits: Hemansh Shah and Animesh Pradhan

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +11,7 @@
 {% seo %}
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+
 <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
 
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
@@ -60,7 +60,7 @@ ga('send', 'pageview');
 
 <!-- Begin Menu Navigation
 ================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top mediumnavigation nav-down">
 
     <div class="container pr-0">
 
@@ -96,7 +96,7 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/aboutus">About Us</a>
                 </li>
 
-                {% include search-lunr.html %}
+
 
             </ul>
 
@@ -107,7 +107,11 @@ ga('send', 'pageview');
     </div>
 </nav>
 
-<h1>Pictures</h1>
+<div class="site-content">
+
+<div class="container">
+<h1 class="text-center mt-5 mb-4">Pictures</h1>
+</div>
 
 <div class="pictures-container">
   {% for picture in page.pictures %}
@@ -148,7 +152,7 @@ ga('send', 'pageview');
 </div>
 
 <!-- Footer -->
- 
+
 <footer class="footer">
     <div class="container">
         <div class="row">
