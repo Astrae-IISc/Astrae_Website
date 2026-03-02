@@ -500,4 +500,40 @@ title: News
 .constellations-section, .messier-section {
   border-top: 1px solid var(--border-color, #333) !important;
 }
+
+@media (max-width: 768px) {
+  .news-page {
+    grid-template-columns: 1fr !important;
+    padding: 10px !important;
+    gap: 16px !important;
+  }
+
+  .calendar {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .calendar-grid {
+    gap: 3px !important;
+  }
+
+  .calendar-day {
+    padding: 4px 2px !important;
+    font-size: 0.75em !important;
+  }
+
+  .calendar-weekday {
+    font-size: 0.65em !important;
+  }
+
+  .news-date {
+    flex: 0 0 55px !important;
+    font-size: 0.85em !important;
+  }
+
+  .news-content h4 {
+    font-size: 1em !important;
+  }
+}
 </style>

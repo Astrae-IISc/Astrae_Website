@@ -79,6 +79,28 @@ title: Pictures
   margin-right: 0;
 }
 
+@media (max-width: 768px) {
+  .pictures-wrapper {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+  }
+  .pictures-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 4px !important;
+  }
+  .picture-inner-rectangle {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    margin-bottom: 3px !important;
+  }
+}
+
 .pictures-image {
   width: 100%;
   height: auto;
@@ -182,6 +204,7 @@ title: Pictures
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) return; // let CSS handle mobile layout
     var grid = document.querySelector('#masonry-gallery');
     imagesLoaded(grid, function () {
       new Masonry(grid, {
