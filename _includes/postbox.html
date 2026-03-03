@@ -4,24 +4,24 @@
 
 <div class="col-lg-4 col-md-6 mb-30px card-group">
     <div class="card h-100">
+        {% if post.image %}
         <div class="maxthumb">
             <a href="{{ site.baseurl }}{{ post.url }}">
-                {% if post.image %}
-                    {% if site.lazyimages == "enabled" %}
-                        <img class="img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
-                    {% else %}
-                        <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
-                    {% endif %}
-                    {% if post.tags %}
-                        <div class="post-tag">
-                            {% for tag in post.tags %}
-                                <span class="badge badge-secondary">{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
+                {% if site.lazyimages == "enabled" %}
+                    <img class="img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+                {% else %}
+                    <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+                {% endif %}
+                {% if post.tags %}
+                    <div class="post-tag">
+                        {% for tag in post.tags %}
+                            <span class="badge badge-secondary">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
                 {% endif %}
             </a>
         </div>
+        {% endif %}
         <div class="card-body">
             <h2 class="card-title">
                 <a style="color: #007bff;" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
