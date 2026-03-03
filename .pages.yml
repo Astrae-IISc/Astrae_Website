@@ -1,0 +1,69 @@
+media:
+  input: assets/images/Stories
+  output: /assets/images/Stories
+
+content:
+  - name: posts
+    label: Blog Posts
+    path: _posts
+    filename: "{year}-{month}-{day}-{fields.title}.md"
+    fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: post
+        hidden: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: author
+        label: Author
+        type: string
+      - name: categories
+        label: Category
+        type: select
+        options:
+          - value: event
+            label: Event
+          - value: blog
+            label: Blog
+          - value: news
+            label: News
+        default: blog
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        description: "Add one tag at a time (e.g. Astrophotography, Workshop)"
+      - name: excerpt
+        label: Excerpt
+        type: text
+        description: "Short summary shown on the blog listing page."
+      - name: image
+        label: Cover Image
+        type: image
+        required: false
+        description: "Optional thumbnail shown on the blog listing."
+      - name: side_gallery
+        label: Extra Images
+        type: image
+        list: true
+        required: false
+        description: "Additional images shown beside the post body."
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+      - name: latest
+        label: Latest
+        type: boolean
+        default: false
+      - name: all
+        label: All
+        type: boolean
+        default: true
+        hidden: true
+      - name: body
+        label: Body
+        type: rich-text
