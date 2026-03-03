@@ -1,12 +1,16 @@
 media:
   input: assets/images/Stories
-  output: /assets/images/Stories
+  output: /Astrae_Website/assets/images/Stories
 
 content:
   - name: posts
     label: Blog Posts
+    type: collection
     path: _posts
     filename: "{year}-{month}-{day}-{fields.title}.md"
+    view:
+      fields: [title, categories, author]
+      primary: title
     fields:
       - name: layout
         label: Layout
@@ -35,22 +39,18 @@ content:
         label: Tags
         type: string
         list: true
-        description: "Add one tag at a time (e.g. Astrophotography, Workshop)"
       - name: excerpt
         label: Excerpt
         type: text
-        description: "Short summary shown on the blog listing page."
       - name: image
         label: Cover Image
         type: image
         required: false
-        description: "Optional thumbnail shown on the blog listing."
       - name: side_gallery
         label: Extra Images
         type: image
         list: true
         required: false
-        description: "Additional images shown beside the post body."
       - name: featured
         label: Featured
         type: boolean
