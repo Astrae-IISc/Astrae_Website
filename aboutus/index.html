@@ -273,16 +273,6 @@
                     <p class="team-tenure">Core Team : 2026 - Present</p>
                 </div>
                 <div class="team-card">
-                    <p class="team-name">Shankar Mahadevan</p>
-                    <img src="/Astrae_Website/assets/images/Members/shankar.jpg" alt="Name" class="team-photo">
-                    <p class="team-tenure">Core Team : 2026 - Present</p>
-                </div>
-                <div class="team-card">
-                    <p class="team-name">Vishak Sasidharan</p>
-                    <img src="/Astrae_Website/assets/images/Members/vishak.jpg" alt="Name" class="team-photo">
-                    <p class="team-tenure">Core Team : 2026 - Present</p>
-                </div>
-                <div class="team-card">
                     <p class="team-name">Apratim Tiwari</p>
                     <img src="/Astrae_Website/assets/images/Members/apratim.png" alt="Name" class="team-photo">
                     <p class="team-tenure">Core Team : 2026 - Present</p>
@@ -339,8 +329,18 @@
             <summary>Ex Core</summary>
             <div class="team-grid">
                 <div class="team-card">
+                    <p class="team-name">Shankar Mahadevan</p>
+                    <img src="/Astrae_Website/assets/images/Members/shankar.jpg" alt="Name" class="team-photo">
+                    <p class="team-tenure">Core Team : 2026 - Present</p>
+                </div>
+                <div class="team-card">
+                    <p class="team-name">Vishak Sasidharan</p>
+                    <img src="/Astrae_Website/assets/images/Members/vishak.jpg" alt="Name" class="team-photo">
+                    <p class="team-tenure">Core Team : 2026 - Present</p>
+                </div>
+                <div class="team-card">
                     <p class="team-name">Pranav Kalsi</p>
-                    <img src="/Astrae_Website/assets/images/Members/pranav.jpg" alt="Name" class="team-photo">
+                    <img src="/Astrae_Website/assets/images/Members/pranav.jpeg" alt="Name" class="team-photo">
                     <p class="team-tenure">Convenor: 2024 - 2025</p>
                     <p class="team-tenure">Core Team : 2023 - Present</p>
                 </div>
@@ -632,6 +632,7 @@
     order: -1; /* Puts the image at the top of the card */
     width: 130px;
     height: 130px;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 50%;
     display: block;
@@ -647,20 +648,42 @@
     line-height: 1.4;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.single-centered-card {
-    width: calc((100% - 2rem) / 3);
+@media (max-width: 600px) {
+    .team-grid {
+        gap: 0.5rem;
+    }
+    .core-dropdown .team-grid {
+        padding: 1rem 0.5rem;
+    }
+    .team-card {
+        padding: 1rem 0.5rem;
+    }
+    .team-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.8rem;
+    }
+    .team-name {
+        font-size: 1rem;
+    }
 }
 
-@media (max-width: 600px) {
-    .single-centered-card {
-        width: calc((100% - 1rem) / 2);
+@media (max-width: 500px) {
+    .team-grid {
+        grid-template-columns: 1fr;
     }
+}
+
+.single-centered-card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
 }
 
 /* Legacy styles for mentor and founder cards */
